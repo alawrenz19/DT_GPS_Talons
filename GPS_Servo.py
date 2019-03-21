@@ -17,6 +17,24 @@ def DT_PWM_Establish():
 #if __name__ == "__main__": use later
 DT_PWM_Establish()
 
+def DT_GPS_talons():
+	x1 = 0
+	y1 = 0
+	x2 = 0
+	y2 = 0
+def vec_trans_length(vec_length(x1,y1)):
+  #robot goes 13.3 cm in 1 second
+  	Length = abs(magnitude) * 15.24
+  	Runtime = Length / 13.3
+  	readtime = time.time()
+ 	while time.time() < (readtime + Runtime):
+    		RPL.servoWrite(motorL, 2000)
+		RPL.servoWrite(motorR, 1000)
+  	if time.time() > (readtime + Runtime):
+    		RPL.servoWrite(motorL, 0)
+    		RPL.servoWrite(motorR, 0)
+
+
 
 
 
